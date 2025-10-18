@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>BuntuBuhle Talent &amp; Tech</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <style>
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            nav ul li {
+                margin: 8px 0;
+            }
+            nav ul li a, nav a {
+                display: block;
+                padding: 10px 20px;
+                background-color: #0077cc;
+                color: white;
+                text-decoration: none;
+                border-radius: 6px;
+                width: 80%;
+                text-align: center;
+            }
+            nav ul li a:hover, nav a:hover {
+                background-color: #005fa3;
+            }
+        }
+        </style>
+        
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<div class="logo-wrap">
+<img alt="BuntuBuhle Logo" class="site-logo" src="assets/logo.png"/>
+<div class="brand-text"><span class="brand-name">BuntuBuhle</span><span class="brand-sub">Talent &amp; Tech</span></div>
+</div>
+<nav class="site-nav" role="navigation">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="about.html">About Us</a>
+<a class="nav-link" href="tech.html">Tech Services</a>
+<a class="nav-link" href="recruitment.html">Recruitment Services</a>
+<a class="nav-link" href="contact.html">Contact Us</a>
+<div class="hamburger"><div></div><div></div><div></div></div></nav>
+</div>
+</header>
+<section class="section container" id="contact">
+<h2>Contact Us</h2>
+<p>Cellphone Number: 0716176966<br/>
+  Email: <a href="mailto:buntubuhleva@gmail.com">buntubuhleva@gmail.com</a><br/>
+  Address: 694 Villa Clari Estates, Clarina Pretoria North</p>
+<h3>Send us a message</h3>
+<form id="contact-form" onsubmit="sendMail(event)">
+<label for="name">Name</label><input id="name" name="name" required=""/>
+<label for="email">Email</label><input id="email" name="email" required="" type="email"/>
+<label for="message">Message</label><textarea id="message" name="message" required="" rows="6"></textarea>
+<button class="btn primary" type="submit">Send Message</button>
+</form>
+</section>
+<script>
+function sendMail(e){e.preventDefault();const n=document.getElementById('name').value;const em=document.getElementById('email').value;const m=document.getElementById('message').value;const subj=encodeURIComponent('Website contact from '+n);const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\n'+m);window.location.href='mailto:buntubuhleva@gmail.com?subject='+subj+'&body='+body;}
+</script>
+<footer class="site-footer">
+<div class="container footer-inner">
+<div class="contact">
+<div>© 2025 Buntubuhle Talent &amp; Tech</div>
+</div>
+<div class="social">
+<a aria-label="Facebook" class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="LinkedIn" class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+</footer>
+</body>
+</html>
